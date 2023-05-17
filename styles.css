@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap'); /* import fonts from Goole Fonts*/
+
+body {
+  background-image: url(./hero.jpg);
+  font-family: 'Roboto', sans-serif;
+}
+
+.content {
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60vh;
+  height: 30vh; /* Set the height to the full viewport height */
+  margin: auto; /*Center horizontally*/
+  margin-top: 40vh; /*center vertically*/
+  border-radius: 1vh;
+  box-shadow: 0 0 1vh /* Horizontal offset, Vertical offset, Blur radius */
+    rgba(0, 0, 0, 0.2); /* Color and opacity */
+  text-transform: capitalize;
+  letter-spacing: 0.3vh;
+}
+
+.modal-btn {
+  text-transform: uppercase;
+  border: none;
+  background-color: azure;
+  border-radius: 0.7vh;
+  letter-spacing: 1vh;
+  padding: 1vh;
+}
+
+.modal-btn:hover {
+  cursor: crosshair;
+  background-color: rgb(182, 218, 218);
+}
