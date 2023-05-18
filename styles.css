@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap'); /* import fonts from Goole Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap'); /* import fonts from Google Fonts*/
 
 body {
   background-image: url(./hero.jpg);
@@ -6,7 +6,6 @@ body {
 }
 
 .content {
-  z-index: 1;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -35,4 +34,52 @@ body {
 .modal-btn:hover {
   cursor: crosshair;
   background-color: rgb(182, 218, 218);
+}
+
+.content2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(73, 166, 233, 0.5);
+
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60vh;
+  height: 40vh;
+  /* margin: auto; */
+  margin-top: 40vh;
+  margin-left: 71vh;
+  border-radius: 1vh;
+  box-shadow: 0 0 1vh rgba(0, 0, 0, 0.2);
+  text-transform: capitalize;
+  letter-spacing: 0.3vh;
+  /* modal visibility lines */
+  visibility: hidden;
+  z-index: -10;
+}
+
+.open-content2 {
+  visibility: visible;
+  z-index: 10;
+}
+
+.close-btn {
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  font-size: x-large;
+  font-weight: 900;
+  color: rgb(183, 24, 24);
+  transition: transform 0.3s ease; /* makes transition smoother*/
+}
+
+.close-btn:hover {
+  cursor: crosshair;
+  transform: scale(1.5);
 }
