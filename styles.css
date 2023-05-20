@@ -36,15 +36,24 @@ body {
   background-color: rgb(182, 218, 218);
 }
 
-.content2 {
-  position: fixed;
-  top: 0;
-  left: 0;
+.modal-overlay {
+  position: fixed; /*positions the element relative to the viewport, meaning it will stay in the same position even if the page is scrolled*/
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /*This transform, combined with the top and left percentages, effectively centers the element both horizontally and vertically on the page.*/
   width: 100%;
   height: 100%;
-  background: rgba(73, 166, 233, 0.5);
-
-  z-index: 1;
+  background-color: rgba(73, 166, 233, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  z-index: -10;
+}
+.content2 {
   background-color: white;
   display: flex;
   justify-content: center;
@@ -52,25 +61,22 @@ body {
   flex-direction: column;
   width: 60vh;
   height: 40vh;
-  /* margin: auto; */
-  margin-top: 40vh;
-  margin-left: 71vh;
   border-radius: 1vh;
   box-shadow: 0 0 1vh rgba(0, 0, 0, 0.2);
   text-transform: capitalize;
   letter-spacing: 0.3vh;
-  /* modal visibility lines */
-  visibility: hidden;
-  z-index: -10;
+  position: relative; /*make cclose-btn relative to the container */
 }
 
-.open-content2 {
+.open-modal {
   visibility: visible;
   z-index: 10;
 }
 
 .close-btn {
-  text-transform: uppercase;
+  position: absolute; /*close button will be positioned relative to the container rather than the entire page.*/
+  top: 2rem;
+  right: 2rem;
   border: none;
   background-color: transparent;
   font-size: x-large;
