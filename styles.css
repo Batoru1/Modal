@@ -11,7 +11,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 60vh;
+  min-width: 40vw; /*the container's width will expand to fit the content up to 40vw*/
+  width: max-content; /*CSS property sets the width of an element to expand as much as necessary to fit its content without overflowing or wrapping to a new line.*/
   height: 30vh; /* Set the height to the full viewport height */
   margin: auto; /*Center horizontally*/
   margin-top: 40vh; /*center vertically*/
@@ -59,7 +60,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 60vh;
+  min-width: 40vw;
+  width: max-content;
   height: 40vh;
   border-radius: 1vh;
   box-shadow: 0 0 1vh rgba(0, 0, 0, 0.2);
@@ -75,8 +77,8 @@ body {
 
 .close-btn {
   position: absolute; /*close button will be positioned relative to the container rather than the entire page.*/
-  top: 2rem;
-  right: 2rem;
+  top: 3vh;
+  right: 2vw;
   border: none;
   background-color: transparent;
   font-size: x-large;
