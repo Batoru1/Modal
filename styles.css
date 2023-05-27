@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-width: 40vw; /*the container's width will expand to fit the content up to 40vw*/
+  min-width: 40vw; /*the container's width will shrink to fit the content no more than 40vw*/
   width: max-content; /*CSS property sets the width of an element to expand as much as necessary to fit its content without overflowing or wrapping to a new line.*/
   height: 30vh; /* Set the height to the full viewport height */
   margin: auto; /*Center horizontally*/
